@@ -38,7 +38,7 @@ def main_page():
     return 'Всё идёт по плану'
 
 
-@app.route('/register', mSethods=['GET', 'POST'])
+@app.route('/register', methods=['GET', 'POST'])
 def reqister():
     db_session.global_init('db/mars_explorer.db')
     form = RegisterForm()
