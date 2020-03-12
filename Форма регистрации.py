@@ -38,7 +38,7 @@ def main_page():
     return 'Всё идёт по плану'
 
 
-@app.route('/register', methods=['GET', 'POST'])
+@app.route('/register', mSethods=['GET', 'POST'])
 def reqister():
     db_session.global_init('db/mars_explorer.db')
     form = RegisterForm()
@@ -54,7 +54,7 @@ def reqister():
                                    message="Такой пользователь уже есть")
         user = User(
             name=form.name.data,
-            surname=form.name.data,
+            surname=form.surname.data,
             email=form.email.data,
             age=form.age.data,
             position=form.position.data,
